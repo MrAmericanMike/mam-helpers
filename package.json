@@ -1,0 +1,45 @@
+{
+	"name": "mam-helpers",
+	"version": "0.0.2",
+	"description": "MAM Helpers",
+	"main": "lib/cjs/main.js",
+	"module": "lib/mjs/main.js",
+	"types": "lib/main.d.ts",
+	"type": "module",
+	"exports": {
+		"require": "./lib/cjs/main.js",
+		"import": "./lib/mjs/main.js"
+	},
+	"scripts": {
+		"build": "rm -rf lib/* && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && fixup"
+	},
+	"files": [
+		"lib/**/*",
+		"package.json",
+		"README.md"
+	],
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/MrAmericanMike/mam-helpers.git"
+	},
+	"keywords": [
+		"MAM Helpers",
+		"MAMHelpers",
+		"mam-helpers",
+		"javascript",
+		"snippets",
+		"random",
+		"levenshtein",
+		"distance"
+	],
+	"author": "MrAmericanMike",
+	"license": "MIT",
+	"homepage": "https://github.com/MrAmericanMike/mam-helpers/blob/master/README.md",
+	"bugs": {
+		"url": "https://github.com/MrAmericanMike/mam-helpers/issues"
+	},
+	"devDependencies": {
+		"typescript": "5.1.3"
+	}
+}
+
