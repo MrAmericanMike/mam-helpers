@@ -1,10 +1,10 @@
 {
 	"name": "mam-helpers",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"description": "MAM Helpers",
 	"main": "lib/cjs/main.js",
 	"module": "lib/mjs/main.js",
-	"types": "lib/main.d.ts",
+	"types": "lib/cjs/main.d.ts",
 	"type": "module",
 	"exports": {
 		"require": "./lib/cjs/main.js",
@@ -23,8 +23,6 @@
 		"url": "git+https://github.com/MrAmericanMike/mam-helpers.git"
 	},
 	"keywords": [
-		"MAM Helpers",
-		"MAMHelpers",
 		"mam-helpers",
 		"javascript",
 		"snippets",
