@@ -93,3 +93,26 @@ export const shuffleArray = <T>(array: T[]): T[] => {
 	return arrayCopy;
 };
 
+/**
+ * Capitalizes the first letter of a string.
+ *
+ * @param {string} data - The string to capitalize.
+ * @returns {string} The capitalized string.
+ */
+export const capitalizeFirstLetter = (data: string): string => {
+	return data[0].toUpperCase() + data.slice(1);
+};
+
+/**
+ * Capitalizes the first letter of each word in a string.
+ *
+ * @param {string} data - The string to capitalize.
+ * @returns {string} The capitalized string.
+ */
+export const capitalizeEachWord = (data: string): string => {
+	return data
+		.split(" ")
+		.map((word) => capitalizeFirstLetter(word))
+		.join(" ");
+};
+

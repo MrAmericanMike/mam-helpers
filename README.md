@@ -37,3 +37,15 @@ Shuffle Array (Returns a Copy not affecting the passed array)
 shuffleArray([1, 2, 3, 4, 5]); // [3, 2, 5, 4, 1]
 ```
 
+Capitalize first letter
+
+```js
+capitalizeFirstLetter("clear sky"); // Clear sky
+```
+
+Capitalize first letter of each word
+
+```js
+capitalizeEachWord("clear sky"); // Clear Sky
+```
+

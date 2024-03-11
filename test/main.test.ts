@@ -1,6 +1,6 @@
 import { it, expect, vitest } from "vitest";
 
-import { getEditDistance, getRandomNumber, getRandomBoolean, getRandomElement, shuffleArray } from "../src/main";
+import { getEditDistance, getRandomNumber, getRandomBoolean, getRandomElement, shuffleArray, capitalizeFirstLetter, capitalizeEachWord } from "../src/main";
 
 it("Should return a random boolean", () => {
 	vitest.spyOn(global.Math, "random").mockReturnValue(0.5);
@@ -55,4 +55,16 @@ it("Should return an empty array when given an empty array", () => {
 	const array: number[] = [];
 	const shuffledArray = shuffleArray(array);
 	expect(shuffledArray).toEqual([]);
+});
+
+it("Should capitalize first letter", () => {
+	const string = "hello world";
+	const capitalizedString = capitalizeFirstLetter(string);
+	expect(capitalizedString).toEqual("Hello world");
+});
+
+it("Should capitalize each word", () => {
+	const string = "hello world";
+	const capitalizedString = capitalizeEachWord(string);
+	expect(capitalizedString).toEqual("Hello World");
 });
