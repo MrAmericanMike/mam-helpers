@@ -1,6 +1,6 @@
 {
 	"name": "mam-helpers",
-	"version": "0.0.4",
+	"version": "0.0.6",
 	"description": "MAM Helpers",
 	"main": "lib/cjs/main.js",
 	"module": "lib/mjs/main.js",
@@ -12,7 +12,8 @@
 	},
 	"scripts": {
 		"build": "rm -rf lib/* && tsc -p tsconfig.esm.json && tsc -p tsconfig.cjs.json && fixup",
-		"test": "vitest"
+		"test": "vitest",
+		"prepublishOnly": "pnpm run build"
 	},
 	"files": [
 		"lib/**/*",
@@ -30,6 +31,7 @@
 		"random",
 		"levenshtein",
 		"distance",
+		"harvesine",
 		"array",
 		"shuffle"
 	],

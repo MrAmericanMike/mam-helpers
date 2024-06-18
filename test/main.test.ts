@@ -1,6 +1,15 @@
 import { it, expect, vitest } from "vitest";
 
-import { getEditDistance, getRandomNumber, getRandomBoolean, getRandomElement, shuffleArray, capitalizeFirstLetter, capitalizeEachWord } from "../src/main";
+import {
+	getEditDistance,
+	getRandomNumber,
+	getRandomBoolean,
+	getRandomElement,
+	shuffleArray,
+	capitalizeFirstLetter,
+	capitalizeEachWord,
+	getHaversineDistance
+} from "../src/main";
 
 it("Should return a random boolean", () => {
 	vitest.spyOn(global.Math, "random").mockReturnValue(0.5);
@@ -67,4 +76,12 @@ it("Should capitalize each word", () => {
 	const string = "hello world";
 	const capitalizedString = capitalizeEachWord(string);
 	expect(capitalizedString).toEqual("Hello World");
+});
+
+it("Should get haversine distance", () => {
+	const distance = getHaversineDistance(0, 0, 0, 0);
+	expect(distance).toEqual(0);
+
+	const distance_2 = getHaversineDistance(59.3293371, 13.4877472, 59.3225525, 13.4619422);
+	expect(distance_2).toEqual(1.6467932911662941);
 });

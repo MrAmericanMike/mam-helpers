@@ -116,3 +116,23 @@ export const capitalizeEachWord = (data: string): string => {
 		.join(" ");
 };
 
+/**
+ * Gets distance between 2 coordinates
+ *
+ * @param {number} lat1 - latitude of the first point
+ * @param {number} lng1 - longitude of the first point
+ * @param {number} lat2 - latitude of the second point
+ * @param {number} lng2 - longitude of the second point
+ * @returns {number} distance between 2 coordinates
+ */
+export const getHaversineDistance = (lat1: number, lng1: number, lat2: number, lng2: number): number => {
+	const R = 6371;
+	const D_LAT = (lat2 - lat1) * (Math.PI / 180);
+	const D_LNG = (lng2 - lng1) * (Math.PI / 180);
+	const A =
+		Math.sin(D_LAT / 2) * Math.sin(D_LAT / 2) +
+		Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) * Math.sin(D_LNG / 2) * Math.sin(D_LNG / 2);
+	const C = 2 * Math.atan2(Math.sqrt(A), Math.sqrt(1 - A));
+	return R * C;
+};
+
