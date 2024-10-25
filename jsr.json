@@ -1,0 +1,5 @@
+{
+	"name": "@mam/helpers",
+	"version": "0.0.6",
+	"exports": "./mod.ts"
+}
